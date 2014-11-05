@@ -14,16 +14,6 @@ Query OK, 0 rows affected (0.08 sec)
 mysql> Create table Department (Name varchar(20) not null, Location varchar(20) not null, Employees int not null);
 Query OK, 0 rows affected (0.09 sec)
 
-mysql> show tables;
-+-------------------------+
-| Tables_in_CognianceTask |
-+-------------------------+
-| Customers               |
-| Department              |
-| Employee                |
-+-------------------------+
-3 rows in set (0.00 sec)
-
 
 mysql> insert into Customers (name,phone,email) Values("Jeffrey",0931234568,"jeffrey@gmail.com");
 Query OK, 1 row affected (0.04 sec)
@@ -35,14 +25,10 @@ mysql> insert into Employee (Name,Age,email)Values ('Tomas',27,'tomas@gmail.com'
 Query OK, 1 row affected (0.04 sec)
 
 mysql> select name from Customers where CustomerID = 1;
+
 mysql> select distinct Customers.name, Employee.email from Customers,Employee;
+
 mysql> select Count(CustomerID) From Customers;
-+-------------------+
-| Count(CustomerID) |
-+-------------------+
-|                 4 |
-+-------------------+
-1 row in set (0.00 sec)
 
 
 
